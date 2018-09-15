@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h.app.hackit.banana.CustomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:addStatesFromChildren="true"
+    android:background="@drawable/bg_options_selector">
+
+    <ImageView
+        android:id="@+id/imgOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/guide4"
+        app:layout_constraintBottom_toTopOf="@+id/guide4"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintTop_toTopOf="@+id/guide3"
+        app:srcCompat="@drawable/ic_heart" />
+
+    <TextView
+        android:id="@+id/textOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/google_sans_medium"
+        android:textColor="@color/text_options_selector"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/guide4"
+        app:layout_constraintEnd_toStartOf="@+id/guide2"
+        app:layout_constraintStart_toEndOf="@+id/imgOption"
+        app:layout_constraintTop_toTopOf="@+id/guide3" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="10dp" />
+</h.app.hackit.banana.CustomLayout>

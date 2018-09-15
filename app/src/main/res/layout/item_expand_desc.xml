@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="@+id/guideVertStart"
+        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        tools:text="Hi There!" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@null"
+        android:duplicateParentState="true"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideVertEnd"
+        app:layout_constraintTop_toTopOf="@+id/guideHorStart"
+        app:srcCompat="@drawable/ic_add" />
+
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/md_grey_800"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideHorEnd"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="@+id/guideVertStart"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        tools:text="Hi There!" />
+
+    <android.support.constraint.Group
+        android:id="@+id/groupExp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="text2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideVertStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideVertEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideHorStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideHorEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="10dp" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_green_100">
+
+    <ImageView
+        android:id="@+id/imageCorr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideHorEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideVertStart"
+        app:layout_constraintTop_toTopOf="@+id/guideHorStart"
+        app:srcCompat="@drawable/ic_tick" />
+
+    <TextView
+        android:id="@+id/textCorrect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/correct_text"
+        android:textColor="@color/md_green_500"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCorr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageCorr"
+        app:layout_constraintTop_toTopOf="@+id/imageCorr" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideVertStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideVertEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideHorStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideHorEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="10dp" />
+</android.support.constraint.ConstraintLayout>
