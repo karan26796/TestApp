@@ -33,9 +33,11 @@ public class FlashActivity extends AppCompatActivity implements ViewPager.OnPage
         adapter = new FragmentPagerAdapter(getSupportFragmentManager(), mList);
         pager.setAdapter(adapter);
         pager.setPageMargin(20);
-        pager.setPadding(20,0,20,0);
+        pager.setPadding(20, 0, 20, 0);
         pager.setClipToPadding(false);
         pager.setClipChildren(false);
+        pager.setOffscreenPageLimit(mList.size());
+        pager.setPageTransformer(true, new ViewPagerTransform());
         pager.addOnPageChangeListener(this);
     }
 
@@ -45,9 +47,11 @@ public class FlashActivity extends AppCompatActivity implements ViewPager.OnPage
         for (int i = 0; i < 4; i++)
             list.add(new SubFlash("This is it", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat egestas ante, at tristique urna. "));
         for (int i = 0; i < 4; i++) {
-            if (i % 2 == 0)
+            if (i % 3 == 1)
                 mList.add(new Flash(getString(R.string.textLong), list, "one"));
-            else
+            else if (i % 3 == 0) {
+                mList.add(new Flash(getString(R.string.textLong), getString(R.string.text_long), "three"));
+            } else
                 mList.add(new Flash(getString(R.string.textLong), getString(R.string.text_long), "two"));
         }
     }

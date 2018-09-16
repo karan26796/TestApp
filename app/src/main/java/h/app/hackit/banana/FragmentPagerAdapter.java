@@ -24,6 +24,9 @@ public class FragmentPagerAdapter extends FragmentStatePagerAdapter {
             case "two":
                 fragment = FragmentTempTwo.newInstance(mList.get(i), i);
                 break;
+            case "three":
+                fragment = FragmentTempThree.newInstance(mList.get(i), i);
+                break;
         }
         return fragment;
     }

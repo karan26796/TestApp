@@ -16,21 +16,16 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FragmentTempTwo extends FragmentBase implements View.OnClickListener {
+public class FragmentTempThree extends FragmentBase implements View.OnClickListener {
     @BindView(R.id.textDesc)
     TextView textDesc;
-    @BindView(R.id.wrong)
-    ConstraintLayout wrongLayout;
-    @BindView(R.id.correct)
-    ConstraintLayout correctLayout;
-    boolean visibility = true;
 
-    public static FragmentTempTwo newInstance(Flash flash, int i) {
+    public static FragmentTempThree newInstance(Flash flash, int i) {
 
         Bundle args = new Bundle();
         args.putParcelable("flash", flash);
         args.putInt("pos", i);
-        FragmentTempTwo fragment = new FragmentTempTwo();
+        FragmentTempThree fragment = new FragmentTempThree();
         fragment.setArguments(args);
         return fragment;
     }
@@ -38,7 +33,7 @@ public class FragmentTempTwo extends FragmentBase implements View.OnClickListene
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_temp_2, container, false);
+        View view = inflater.inflate(R.layout.fragment_temp_3, container, false);
         ButterKnife.bind(this, view);
         assert titleText != null;
         String s = "Question "
